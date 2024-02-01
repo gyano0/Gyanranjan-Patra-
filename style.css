@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, #020024 0%, rgba(19,19,195,1) 35%, rgba(0,212,255,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+.left{
+    /* border: 2px solid white; */
+    width: 40%;
+    color: #fff;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.left h2{
+    font-size: 4rem;
+}
+.left p{
+    padding: 29px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.right{
+    width: 60%;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 150px;
+    
+    padding-right: 10px
+}
+#gallery .box{
+    background-position: top;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: 0.6s ease-in-out;
+    
+}
+#Lake{
+    background-position: bottom;
+}
+#gallery .box:hover{
+    transform: scale(1.5);
+}
+#WaterFall{
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+}
+/* #Mountain{
+    grid-row-start: 1;
+    grid-row-end: 3;
+} */
+@media(max-width:1094px){
+    .container{
+        flex-direction: column;
+    }
+}
+@media(max-width:860px){
+    #WaterFall{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    
+    }
+}
+@media(max-width:800px){
+    #WaterFall{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    
+    }
+    /* #Mountain{
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+    }
+    #Lake{
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+    }
+    #Landscape{
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+    }
+    #River{
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+    }
+    #Terrain{
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+    }
+    #Jungle{
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+    } */
+   
+}
+@media (max-width:660px){
+    .left h2{
+        font-size: 2.5rem;
+    }
+    .right{
+        grid-template-columns: repeat(2,1fr);
+        grid-auto-rows: 125px;
+    }
+}
+@media (max-width:566px){
+    .right{
+        grid-template-columns: repeat(2,1fr);
+        grid-auto-rows: 100px;
+        padding: 2px;
+
+    }
+    .right .box{
+        background-position: bottom;
+    }
+
+}
+@media (max-width:310px){
+    .left h2{
+        font-size: 2rem;
+
+    }
+    .right{
+        grid-template-columns: repeat(2,1fr);
+        grid-auto-rows: 80px;
+        padding: 2px;
+
+    }
+
+}
